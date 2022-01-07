@@ -11,9 +11,10 @@ package modelo;
  * Data   : 07 - 01 - 2022
  * Objectivo : Construir a comuna modelo 
  */
-public class ComunaModelo {
+public class ComunaModelo 
+{
     
-    private int pk_comuna, pk_municipio;
+    private int pk_comuna, fk_municipio;
     private String descricao;
 
     public ComunaModelo() {
@@ -21,7 +22,7 @@ public class ComunaModelo {
 
     public ComunaModelo(int pk_comuna, int pk_municipio, String descricao) {
         this.pk_comuna = pk_comuna;
-        this.pk_municipio = pk_municipio;
+        this.fk_municipio = pk_municipio;
         this.descricao = descricao;
     }
 
@@ -34,11 +35,11 @@ public class ComunaModelo {
     }
 
     public int getPk_municipio() {
-        return pk_municipio;
+        return fk_municipio;
     }
 
     public void setPk_municipio(int pk_municipio) {
-        this.pk_municipio = pk_municipio;
+        this.fk_municipio = pk_municipio;
     }
 
     public String getDescricao() {
