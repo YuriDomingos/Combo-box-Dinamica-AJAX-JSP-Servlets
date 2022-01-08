@@ -92,7 +92,7 @@ public class provinciaDAO
     
     public ArrayList<ComunaModelo> listar_todas_comunas_pelo_id_municipio(int id_municipio)
     {
-         ArrayList<MunicipioModelo> listaAdd = new ArrayList<>();
+         ArrayList<ComunaModelo> listaAdd = new ArrayList<>();
          
          String query = "SELECT *FROM comuna where fk_municipio = ?";
          
@@ -109,16 +109,17 @@ public class provinciaDAO
                  ComunaModelo comunuaModelo = new ComunaModelo();
                  comunuaModelo.setPk_comuna(rs.getInt(1));
                  comunuaModelo.setDescricao(rs.getString(2));
-                 comunuaModelo.set
+                 comunuaModelo.setFk_municipio(rs.getInt(3));
+                 listaAdd.add(comunuaModelo);
+                 
              }
-                     
-             
+                    
          }
          catch(SQLException ex)
          {
              System.out.println("Erro ao listar os municipio "+ex.toString());
          }
-        
+        return listaAdd;
     }
     
     

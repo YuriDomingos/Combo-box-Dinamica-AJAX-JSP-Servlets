@@ -20,9 +20,9 @@ public class ComunaModelo
     public ComunaModelo() {
     }
 
-    public ComunaModelo(int pk_comuna, int pk_municipio, String descricao) {
+    public ComunaModelo(int pk_comuna, int fk_municipio, String descricao) {
         this.pk_comuna = pk_comuna;
-        this.fk_municipio = pk_municipio;
+        this.fk_municipio = fk_municipio;
         this.descricao = descricao;
     }
 
@@ -34,12 +34,12 @@ public class ComunaModelo
         this.pk_comuna = pk_comuna;
     }
 
-    public int getPk_municipio() {
+    public int getFk_municipio() {
         return fk_municipio;
     }
 
-    public void setPk_municipio(int pk_municipio) {
-        this.fk_municipio = pk_municipio;
+    public void setFk_municipio(int fk_municipio) {
+        this.fk_municipio = fk_municipio;
     }
 
     public String getDescricao() {
@@ -49,7 +49,7 @@ public class ComunaModelo
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    
-    
+
+   
     
 }
